@@ -1,0 +1,22 @@
+Import random
+c=0
+x=True
+mylist=[‘apple’, ‘gauva’, ‘plum’, ‘grapes’, ‘orange’, ‘cherry’, ‘lemon’, ‘kiwi’]
+while(x):
+    randomword=random.choice(mylist)
+    word=random.sample(randomword,len(randomword))
+    jumbledword= “ ”.join(word)
+    print(jumbledword)
+    inp=input(“guess the word:”)
+    if randomword==inp:
+        print(“you are correct”)
+        c=c+1
+        print(“do you want to continue:”)
+        option=input(“yes/no:”)
+        if option== “no”:
+            x=false
+            print(“your score is:”,c)
+    else:
+        print(“you lost the game”)
+        print(“your score is:”,c)
+break
